@@ -1,0 +1,580 @@
+/* =========================================
+   FUENTES
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111111;
+    color: #F2F2F2;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   ENCABEZADO / NAVEGACIÓN
+========================================= */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background-color: #111111;
+    border-bottom: 1px solid #333333;
+}
+
+.logo img {
+    width: 65px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: #F2F2F2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #AAAAAA;
+}
+
+
+/* =========================================
+   INICIO / HERO
+========================================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 70px 7%;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+}
+
+.hero-contenido {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-texto {
+    width: 55%;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #F2F2F2;
+    color: #111111;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: 2px;
+}
+
+.hero h1 span {
+    color: #AAAAAA;
+}
+
+.profesion {
+    margin-top: 25px;
+    color: #CCCCCC;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 25px;
+    background-color: #F2F2F2;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #AAAAAA;
+}
+
+
+/* FOTOGRAFÍA DEL INICIO */
+
+.hero-imagen {
+    width: 40%;
+    position: relative;
+    padding: 15px;
+    background-color: #333333;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   PAPEL RASGADO
+========================================= */
+
+.papel-rasgado {
+    width: 100%;
+    height: 65px;
+    clip-path: polygon(
+        0% 20%,
+        5% 35%,
+        10% 10%,
+        16% 40%,
+        22% 15%,
+        28% 35%,
+        34% 5%,
+        40% 40%,
+        46% 15%,
+        52% 35%,
+        58% 10%,
+        64% 40%,
+        70% 15%,
+        76% 35%,
+        82% 5%,
+        88% 40%,
+        94% 15%,
+        100% 30%,
+        100% 100%,
+        0% 100%
+    );
+}
+
+.papel-rasgado.claro {
+    background-color: #F2F2F2;
+}
+
+.papel-rasgado.oscuro {
+    background-color: #111111;
+}
+
+
+/* =========================================
+   SOBRE MÍ
+========================================= */
+
+.sobre-mi {
+    width: 100%;
+    background-color: #F2F2F2;
+    color: #111111;
+    padding: 85px 7%;
+}
+
+.sobre-mi-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.sobre-mi-texto {
+    width: 55%;
+}
+
+.sobre-mi-texto h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.sobre-mi-texto h2 span {
+    color: #777777;
+}
+
+.linea {
+    width: 75px;
+    height: 5px;
+    background-color: #111111;
+    margin-bottom: 25px;
+}
+
+.sobre-mi-texto p {
+    color: #222222;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+
+/* FOTOGRAFÍA SOBRE MÍ */
+
+.sobre-mi-imagen {
+    width: 40%;
+    min-height: 350px;
+    background-color: #DDDDDD;
+}
+
+.sobre-mi-imagen img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   HABILIDADES
+========================================= */
+
+.habilidades {
+    padding: 85px 7%;
+    background-color: #111111;
+}
+
+.habilidades h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 45px;
+}
+
+.habilidades-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.habilidad {
+    width: 33.33%;
+    padding: 25px;
+    background-color: #1D1D1D;
+    border-bottom: 3px solid #777777;
+}
+
+.habilidad h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+/* ICONOS */
+
+.iconos {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.iconos img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.iconos img:hover {
+    transform: scale(1.1);
+}
+
+.habilidad p {
+    color: #AAAAAA;
+    font-size: 0.85rem;
+}
+
+
+/* DIBUJO */
+
+.dibujo img:first-child {
+    width: 60px;
+    height: 60px;
+}
+
+.dibujo img:last-child {
+    width: 85px;
+    height: 85px;
+}
+
+
+/* =========================================
+   PROYECTOS
+========================================= */
+
+.proyectos {
+    padding: 85px 7%;
+    background-color: #F2F2F2;
+    color: #111111;
+}
+
+.proyectos h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 45px;
+}
+
+.proyectos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.proyecto {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    transition: transform 0.3s;
+}
+
+.proyecto:hover {
+    transform: translateY(-7px);
+}
+
+.proyecto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.proyecto-texto {
+    padding: 22px;
+}
+
+.proyecto h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.proyecto p {
+    color: #555555;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.proyecto a {
+    color: #111111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.proyecto a:hover {
+    color: #777777;
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.contacto {
+    padding: 85px 7%;
+    background-color: #111111;
+}
+
+.contacto-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.contacto-info {
+    width: 45%;
+}
+
+.contacto h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 25px;
+}
+
+.contacto-info > p {
+    color: #CCCCCC;
+    margin-bottom: 30px;
+}
+
+.redes p {
+    margin-bottom: 18px;
+    color: #F2F2F2;
+}
+
+
+/* FORMULARIO */
+
+.formulario {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #1D1D1D;
+    border: 1px solid #555555;
+    color: #F2F2F2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.formulario textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: 2px solid #AAAAAA;
+}
+
+.formulario button {
+    align-self: flex-start;
+    padding: 14px 25px;
+    background-color: #F2F2F2;
+    color: #111111;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #AAAAAA;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.pie {
+    background-color: #080808;
+    border-top: 1px solid #444444;
+    padding: 30px 7%;
+    text-align: center;
+}
+
+.pie p {
+    color: #777777;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin: 5px 0;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    .hero-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-texto,
+    .hero-imagen {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero-imagen {
+        max-width: 400px;
+    }
+
+    .sobre-mi-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sobre-mi-texto,
+    .sobre-mi-imagen {
+        width: 100%;
+    }
+
+    .sobre-mi-texto h2 {
+        font-size: 3.5rem;
+    }
+
+    .habilidades-contenedor {
+        flex-direction: column;
+    }
+
+    .habilidad {
+        width: 100%;
+    }
+
+    .proyectos-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-contenido {
+        flex-direction: column;
+    }
+
+    .contacto-info,
+    .formulario {
+        width: 100%;
+    }
+
+}
